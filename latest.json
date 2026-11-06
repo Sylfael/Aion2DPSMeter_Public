@@ -1,15 +1,15 @@
 {
   "format": "a2meter-update/1",
-  "version": "0.11.0",
-  "published": "2026-11-06T21:16:32Z",
-  "notes": "# Aion2DPSMeter 0.11.0\n\nAn alerts bell in the status bar, and windows that stay where you put them.\n\n- **Active alerts.** A small bell with a number appears in the status bar while something needs your attention: a field boss you follow is coming or is up, a character's Odyle is full or its Nightmare tickets are at the cap, an update is out, or the game protocol is not verified yet. Its colour shows the most urgent one. Hover or click it to see the list; click a line to open the right window (the World window on that boss, the Tickets window on that character, or Settings), or ✕ to hide it until it is over. It stays visible when the meter is a slim strip or hidden. Turn it off, or choose what it lists, in Settings → Alerts. Muted characters never show. The pop-up toasts work as before.\n- **The meter comes back where you left it.** Its place and width are restored reliably at every start, before it appears, on the same monitor, also in \"Grow upwards\" mode. If that monitor is gone, it goes to the top left of your main screen.\n- **Every window remembers its place.** The applicants, fight details, World, Pets, Tickets and Settings windows now open where you left them, at the same size (maximised windows open maximised when you open them yourself). A window whose screen is gone opens centred.\n- **Reset window positions** in Settings → General puts every window back to its default place.",
+  "version": "0.12.0",
+  "published": "2026-11-06T22:22:22Z",
+  "notes": "# Aion2DPSMeter 0.12.0\n\nHealing: who healed how much, and who kept whom alive.\n\n- **The meter can show healing.** Choose what the rows show in Settings → Meter (\"Overlay shows\") or in the meter's quick settings: damage (as before), healing, or both. A click on the party number in the meter's header switches too. Healing rows show HPS, the healing done, the overheal and each player's share of the party's healing. In \"both\" mode the damage rows get an HPS column and a thin green stripe for the healing; players who only healed are listed at the end. Healing means HP actually restored: overheal (healing on a full or nearly full HP bar) and shields are not counted as healing.\n- **A Healing tab in the fight details.** For each player: healing, HPS, overheal, every heal skill (direct heals, heals over time, lifesteal, potions and food, restoration on hit, shields), who they healed and how much, and the healing they received, split by who it came from. A chart shows the party's healing per second, and the selected player's, under the boss HP line, so you can see when the heavy healing happened. \"Shielded by\" lists whose shields took hits for the player.\n- **Shields are no longer counted as damage taken.** Until now, a hit that a shield absorbed could be counted twice in \"damage taken\". It is counted once now, so **damage taken for shielded players is lower than before**. The fight details show how much of the damage taken each source's hits put into shields (\"absorbed\"), and how much HP was really lost.\n- **Fight history shows HPS.** The fight picker in the fight details lists the party's HPS next to its DPS. Fights saved before 0.12.0 have no healing data; their Healing tab says so.",
   "min_version": null,
   "assets": [
     {
-      "name": "Aion2DPSMeter-kit-0.11.0.zip",
-      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.11.0/Aion2DPSMeter-kit-0.11.0.zip",
-      "size": 6723980,
-      "sha256": "25f19dc6193e501fa662be6e1f12d4061412154cd07ca3ad6238bfd9259ab28d"
+      "name": "Aion2DPSMeter-kit-0.12.0.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.12.0/Aion2DPSMeter-kit-0.12.0.zip",
+      "size": 6776583,
+      "sha256": "a33ec09acb9769ba63b4ac220319ac9023bc1838758492cca2c44b6d08d6455c"
     }
   ],
   "signature": null
