@@ -1,15 +1,15 @@
 {
   "format": "a2meter-update/1",
-  "version": "0.7.1",
-  "published": "2026-11-06T11:23:34Z",
-  "notes": "# Aion2DPSMeter 0.7.1\n\nA small release to test the one-click update from 0.7.0.\n\n- Updated recording checklist: today's results are ticked, and the next steps are listed (update test, menu capture test, side-by-side comparison, leaving a party you don't lead).\n- No change to the meter itself.\n\nIf you are on 0.7.0: ⚙ → Updates → **Update now**. The meter downloads this kit, checks it, replaces its files and restarts. ⚙ \"Roll back\" returns to 0.7.0.",
+  "version": "0.8.0",
+  "published": "2026-11-06T12:58:38Z",
+  "notes": "New in 0.8.0:\n- Skill and buff names with their icons in the fight details window: the skills table, the opener, the buffs on you and on the target, and the death recap. Hover a skill to see its active specialties.\n- The game's official class emblems, in the class colours, on the meter, the inspector cards and the fight details. ⚙ \"Class icons\" chooses Official (class colour), Official (silver), Simple (our own icons) or Off.\n- New colour for the Chanter: orange.\n- Icons and emblems are loaded from NCSOFT's own image server while ⚙ \"Load icons from NCSOFT\" is on (the default). Turn it off and nothing is fetched: you see names and our own class icons only.\n- World window (tray \"World…\" or the globe button on the meter): field-boss timers per map, shown as up, spawns in m:ss, due, dead or unknown, with how old the list is. Open the world map in game (Field Boss tab) once to fill it; the timers are kept between runs. All 24 Altgard field bosses are named.\n- Field-boss alerts: pick a boss in the World window and choose how many minutes before (for example 5 and 1) and/or when it spawns. The meter shows a notice and plays a short tone (⚙ \"Alert sound\" and \"Alert volume\"). \"Open World window on alerts\" is off by default.\n- Pets window (tray \"Pets…\" or the paw button): your pet collection per board with levels, souls and what is maxed, your soul crystals, and the Black Cloud merchant's offers marked as unlocks, levels up, useful or wasted, with price and discount. \"Export for aion2-tools\" saves a file in Documents\\Aion2DPSMeter.\n- Hide in game menus (first version): the meter fades out while a full-screen game window is open (inventory, map, skills, shop…) and comes back when you close it. ⚙ \"Hide in game menus\" (on), \"Keep visible in combat\" (on) and a sensitivity choice. If your PC cannot capture the game window, ⚙ says \"capture unavailable\" and the meter simply stays visible. Please tell us if it hides at the wrong time or never hides.\n- Applicant and party cards show a server tag when a player comes from another server, outlined when they are from the other faction.\n- When you lead a room, the inspector now notices when you decline an applicant and when an applicant withdraws (or joins another room), and drops their card.\n- Open-world field bosses where the game does not send other players' damage are detected by themselves: the meter shows your damage only and says so, instead of a meaningless party DPS.\n- The inspector no longer reopens itself right after you close it. After a close it waits 60 s before opening for a party again (20 s for a new applicant), people already seen in your room or party in the last 30 minutes never reopen it (zone changes and dungeon entry used to), and a minimised inspector stays minimised. meter.log says why it opened or stayed closed.\n- Full monster names: more than 7,000 monsters are now named.\n- \"Grow upwards\" now keeps the normal layout (header on top, rank 1 first, buttons at the bottom); the window still keeps its bottom edge, so a strip parked at the bottom of the screen grows upwards into the full meter.\n\nRequirements: Windows 10 or 11 and Npcap.",
   "min_version": null,
   "assets": [
     {
-      "name": "Aion2DPSMeter-kit-0.7.1.zip",
-      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.7.1/Aion2DPSMeter-kit-0.7.1.zip",
-      "size": 5767540,
-      "sha256": "4fbc8ec19a34e1000c614d42b008d6290ec09717e39fe41af54d3f62828a12a6"
+      "name": "Aion2DPSMeter-kit-0.8.0.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.8.0/Aion2DPSMeter-kit-0.8.0.zip",
+      "size": 6471644,
+      "sha256": "3918a427543d98407115e03bc2ad2a8f4632bbcd87d4e15b4fd057dbfb54ad95"
     }
   ],
   "signature": null
