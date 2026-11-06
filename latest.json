@@ -1,15 +1,15 @@
 {
   "format": "a2meter-update/1",
-  "version": "0.9.1",
-  "published": "2026-11-06T18:41:01Z",
-  "notes": "# Aion2DPSMeter 0.9.1\n\n- Tickets window: a bell on each character turns its ticket alerts (\"Odyle full\", \"Nightmare at cap\") on or off. Muted characters never alert; the choice is saved. The two alert switches at the top still turn each alert on or off for everyone.",
+  "version": "0.10.0",
+  "published": "2026-11-06T20:15:06Z",
+  "notes": "# Aion2DPSMeter 0.10.0\n\nA design pass over every window.\n\n- **Settings window.** All settings now live in their own window with tabs: General, Appearance, Meter, Party, Alerts, Capture and About. Every option has a short explanation. Open it from the tray (Settings…) or from \"All settings…\" in the overlay. Changes apply to the overlay at once.\n- **Quick panel.** The overlay's ⚙ now holds only what you change mid-fight: size, boss fights only, idle mode, hide in game menus and click-through.\n- **Overlay.** Numbers on the class bars are easier to read, column headers are aligned, alert toasts no longer push the rows down, and the click-through hint no longer covers the boss name. Footer buttons are larger, and text never gets smaller than 9 px at 85 %.\n- **Ping colour** compares with your own best ping of the session, so a stable ExitLag ping is no longer always amber.\n- **All windows.** One style for buttons, tables and empty states; drawn icons instead of text symbols; visible keyboard focus. Fight details group the summary into output, activity, hit quality and defence.",
   "min_version": null,
   "assets": [
     {
-      "name": "Aion2DPSMeter-kit-0.9.1.zip",
-      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.9.1/Aion2DPSMeter-kit-0.9.1.zip",
-      "size": 6605294,
-      "sha256": "c0afd1cec0f4c1e4379b86d13146899ca7a3d899cbdb2decd09d42c7c7cb2047"
+      "name": "Aion2DPSMeter-kit-0.10.0.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.10.0/Aion2DPSMeter-kit-0.10.0.zip",
+      "size": 6623137,
+      "sha256": "c9022da3b388a1cbe41e883a1d6aac03b74f01f9a93734f922c07eeec6ceb38d"
     }
   ],
   "signature": null
