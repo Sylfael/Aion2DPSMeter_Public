@@ -1,15 +1,15 @@
 {
   "format": "a2meter-update/1",
-  "version": "0.10.0",
-  "published": "2026-11-06T20:15:06Z",
-  "notes": "# Aion2DPSMeter 0.10.0\n\nA design pass over every window.\n\n- **Settings window.** All settings now live in their own window with tabs: General, Appearance, Meter, Party, Alerts, Capture and About. Every option has a short explanation. Open it from the tray (Settings…) or from \"All settings…\" in the overlay. Changes apply to the overlay at once.\n- **Quick panel.** The overlay's ⚙ now holds only what you change mid-fight: size, boss fights only, idle mode, hide in game menus and click-through.\n- **Overlay.** Numbers on the class bars are easier to read, column headers are aligned, alert toasts no longer push the rows down, and the click-through hint no longer covers the boss name. Footer buttons are larger, and text never gets smaller than 9 px at 85 %.\n- **Ping colour** compares with your own best ping of the session, so a stable ExitLag ping is no longer always amber.\n- **All windows.** One style for buttons, tables and empty states; drawn icons instead of text symbols; visible keyboard focus. Fight details group the summary into output, activity, hit quality and defence.",
+  "version": "0.10.1",
+  "published": "2026-11-06T20:52:25Z",
+  "notes": "# Aion2DPSMeter 0.10.1\n\nReset times in the Tickets window, and an update notice when the meter starts.\n\n- **Daily and weekly resets.** The Tickets window shows when the next daily reset comes (07:00 UTC every day) and the weekly one (Wednesday 07:00 UTC), with your local time. These times come from community guides and the game's own data, not from an official announcement; the in-game \"Daily recharge in\" countdown is always right.\n- **Values after a reset.** When a reset passed since a value was seen, the window says so (↻). Where the recordings show exactly what a reset gives, the new value is estimated and marked \"~\": Nightmare +2 a day (up to 14), Ascension back to 3 and the daily dungeon back to 14 every Wednesday. Shugo and Invasion keys stay as last seen, because the recordings do not show their refill clearly.\n- **Update notice.** The meter now checks for a new version 5 seconds after it starts (and every 6 hours, as before). When one is out, a small notice appears over the top of the meter: Update now, Later, What's new, or Skip this version. It never installs anything by itself, never takes focus from the game, and waits while the meter is hidden or you are in a fight. The tray menu and its tooltip say so too.\n- **Note:** this version itself is found by 0.10.0 the old way (about 30 seconds after start, a dot on the ⚙ button). The new notice works from 0.10.1 on.\n- The World window lists the daily and weekly reset under fixed schedules, so you can set an alert on them.",
   "min_version": null,
   "assets": [
     {
-      "name": "Aion2DPSMeter-kit-0.10.0.zip",
-      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.10.0/Aion2DPSMeter-kit-0.10.0.zip",
-      "size": 6623137,
-      "sha256": "c9022da3b388a1cbe41e883a1d6aac03b74f01f9a93734f922c07eeec6ceb38d"
+      "name": "Aion2DPSMeter-kit-0.10.1.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.10.1/Aion2DPSMeter-kit-0.10.1.zip",
+      "size": 6637464,
+      "sha256": "0a9b1252e0d7aae36588d13726a0f5781950fefc6e6974b476c9e2e02f93e7b2"
     }
   ],
   "signature": null
