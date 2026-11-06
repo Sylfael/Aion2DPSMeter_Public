@@ -1,15 +1,15 @@
 {
   "format": "a2meter-update/1",
-  "version": "0.12.0",
-  "published": "2026-11-06T22:22:22Z",
-  "notes": "# Aion2DPSMeter 0.12.0\n\nHealing: who healed how much, and who kept whom alive.\n\n- **The meter can show healing.** Choose what the rows show in Settings → Meter (\"Overlay shows\") or in the meter's quick settings: damage (as before), healing, or both. A click on the party number in the meter's header switches too. Healing rows show HPS, the healing done, the overheal and each player's share of the party's healing. In \"both\" mode the damage rows get an HPS column and a thin green stripe for the healing; players who only healed are listed at the end. Healing means HP actually restored: overheal (healing on a full or nearly full HP bar) and shields are not counted as healing.\n- **A Healing tab in the fight details.** For each player: healing, HPS, overheal, every heal skill (direct heals, heals over time, lifesteal, potions and food, restoration on hit, shields), who they healed and how much, and the healing they received, split by who it came from. A chart shows the party's healing per second, and the selected player's, under the boss HP line, so you can see when the heavy healing happened. \"Shielded by\" lists whose shields took hits for the player.\n- **Shields are no longer counted as damage taken.** Until now, a hit that a shield absorbed could be counted twice in \"damage taken\". It is counted once now, so **damage taken for shielded players is lower than before**. The fight details show how much of the damage taken each source's hits put into shields (\"absorbed\"), and how much HP was really lost.\n- **Fight history shows HPS.** The fight picker in the fight details lists the party's HPS next to its DPS. Fights saved before 0.12.0 have no healing data; their Healing tab says so.",
+  "version": "0.12.1",
+  "published": "2026-11-06T23:08:57Z",
+  "notes": "# Aion2DPSMeter 0.12.1\n\nTwo fixes to the Healing tab.\n\n- **Critical heals show \"—\" instead of 0.0 %.** Heals do not crit in this game: we checked over 28,000 heals from several recorded sessions, and none of them is marked as a crit or comes out bigger the way a crit would. The same healers' attacks crit about half the time, so the meter does read crits; heals just don't have them. The crit column and the crit tile now show \"—\", and hovering them says why. The meter's row tooltip no longer says \"crit heals 0.0 %\".\n- **The healing chart is easier to read.** The chart under the boss HP line used to scale to the single biggest second of healing, so one big burst (say 39k when the fight averaged 4.4k) squashed everything else into a flat strip. It now scales to the usual high level of healing (the 95th percentile) and cuts off the few bigger seconds at the top, with a small ▲ over each one. Hover a ▲ to see its time and value. The legend still shows the peak.\n- A rare case where an ally's attack could be counted as a heal is now counted as damage.",
   "min_version": null,
   "assets": [
     {
-      "name": "Aion2DPSMeter-kit-0.12.0.zip",
-      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.12.0/Aion2DPSMeter-kit-0.12.0.zip",
-      "size": 6776583,
-      "sha256": "a33ec09acb9769ba63b4ac220319ac9023bc1838758492cca2c44b6d08d6455c"
+      "name": "Aion2DPSMeter-kit-0.12.1.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.12.1/Aion2DPSMeter-kit-0.12.1.zip",
+      "size": 6776849,
+      "sha256": "23b808d4d356f8c8b090b1cdffc5fd5932ea8552b52f0c4e3801f761a73913e6"
     }
   ],
   "signature": null
