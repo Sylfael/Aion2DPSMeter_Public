@@ -1,15 +1,15 @@
 {
   "format": "a2meter-update/1",
-  "version": "0.10.1",
-  "published": "2026-11-06T20:52:25Z",
-  "notes": "# Aion2DPSMeter 0.10.1\n\nReset times in the Tickets window, and an update notice when the meter starts.\n\n- **Daily and weekly resets.** The Tickets window shows when the next daily reset comes (07:00 UTC every day) and the weekly one (Wednesday 07:00 UTC), with your local time. These times come from community guides and the game's own data, not from an official announcement; the in-game \"Daily recharge in\" countdown is always right.\n- **Values after a reset.** When a reset passed since a value was seen, the window says so (↻). Where the recordings show exactly what a reset gives, the new value is estimated and marked \"~\": Nightmare +2 a day (up to 14), Ascension back to 3 and the daily dungeon back to 14 every Wednesday. Shugo and Invasion keys stay as last seen, because the recordings do not show their refill clearly.\n- **Update notice.** The meter now checks for a new version 5 seconds after it starts (and every 6 hours, as before). When one is out, a small notice appears over the top of the meter: Update now, Later, What's new, or Skip this version. It never installs anything by itself, never takes focus from the game, and waits while the meter is hidden or you are in a fight. The tray menu and its tooltip say so too.\n- **Note:** this version itself is found by 0.10.0 the old way (about 30 seconds after start, a dot on the ⚙ button). The new notice works from 0.10.1 on.\n- The World window lists the daily and weekly reset under fixed schedules, so you can set an alert on them.",
+  "version": "0.11.0",
+  "published": "2026-11-06T21:16:32Z",
+  "notes": "# Aion2DPSMeter 0.11.0\n\nAn alerts bell in the status bar, and windows that stay where you put them.\n\n- **Active alerts.** A small bell with a number appears in the status bar while something needs your attention: a field boss you follow is coming or is up, a character's Odyle is full or its Nightmare tickets are at the cap, an update is out, or the game protocol is not verified yet. Its colour shows the most urgent one. Hover or click it to see the list; click a line to open the right window (the World window on that boss, the Tickets window on that character, or Settings), or ✕ to hide it until it is over. It stays visible when the meter is a slim strip or hidden. Turn it off, or choose what it lists, in Settings → Alerts. Muted characters never show. The pop-up toasts work as before.\n- **The meter comes back where you left it.** Its place and width are restored reliably at every start, before it appears, on the same monitor, also in \"Grow upwards\" mode. If that monitor is gone, it goes to the top left of your main screen.\n- **Every window remembers its place.** The applicants, fight details, World, Pets, Tickets and Settings windows now open where you left them, at the same size (maximised windows open maximised when you open them yourself). A window whose screen is gone opens centred.\n- **Reset window positions** in Settings → General puts every window back to its default place.",
   "min_version": null,
   "assets": [
     {
-      "name": "Aion2DPSMeter-kit-0.10.1.zip",
-      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.10.1/Aion2DPSMeter-kit-0.10.1.zip",
-      "size": 6637464,
-      "sha256": "0a9b1252e0d7aae36588d13726a0f5781950fefc6e6974b476c9e2e02f93e7b2"
+      "name": "Aion2DPSMeter-kit-0.11.0.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.11.0/Aion2DPSMeter-kit-0.11.0.zip",
+      "size": 6723980,
+      "sha256": "25f19dc6193e501fa662be6e1f12d4061412154cd07ca3ad6238bfd9259ab28d"
     }
   ],
   "signature": null
