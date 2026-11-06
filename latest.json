@@ -1,0 +1,16 @@
+{
+  "format": "a2meter-update/1",
+  "version": "0.7.0",
+  "published": "2026-11-06T11:13:54Z",
+  "notes": "First numbered release. The earlier test kits (up to kit 7b) had no version number and show as 0.0.1; install this one by hand once, later versions update themselves.\n\nNew in 0.7.0:\n- Class colours and the original class icons on the meter, the inspector and the fight details (⚙ \"Class icons\"; off shows a colour square).\n- Size settings: an overlay size from 85 to 150 %, and a text size for the inspector and fight details windows.\n- The inspector opens by itself when a new applicant arrives, without taking focus from the game, and looks them up right away. It can also open when you join a party (off by default), and \"Look up automatically\" looks up everyone even while it stays closed.\n- \"Grow upwards\": the overlay keeps its bottom edge and grows up, for a strip parked at the bottom of the screen.\n- The overlay remembers where you left it.\n- Update check and one-click update (⚙ \"Check for updates\"). Beta updates are not signed yet: only install builds published by the owner.\n\nAlso in this build (from kit 6):\n- Fight details window: skills, buffs, damage taken and the history of recent fights.\n- Optional uptime column.\n- Boss HP left in % with a thin HP bar in the header.\n- A warning after a game patch when the meter cannot confirm the game's data format (\"unverified protocol\").\n- abysslogs.com ranks on applicant and party cards (⚙ \"abysslogs ranks\").\n\nRequirements: Windows 10 or 11 and Npcap.",
+  "min_version": null,
+  "assets": [
+    {
+      "name": "Aion2DPSMeter-kit-0.7.0.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.7.0/Aion2DPSMeter-kit-0.7.0.zip",
+      "size": 5767294,
+      "sha256": "260acd54ef07bb0aca80d2ca829bfa576cdf255454983f170ca8d2ff2be52510"
+    }
+  ],
+  "signature": null
+}
