@@ -7,6 +7,7 @@ Aion2DPSMeter reads the game's network traffic on your own PC. Everything it mea
 | To | What | When |
 |---|---|---|
 | **NCSOFT's official armory** (`api-search.plaync.com`, `aion2.plaync.com`) | The character name and server of a party applicant or member, to read their public profile (gear, item level, combat power) | When a look-up runs: you click it, the inspector opens itself for new applicants (⚙ "Open inspector on new applicants"), or ⚙ "Look up automatically" is on |
+| **NCSOFT's official armory** (`api-search.plaync.com`, `aion2.plaync.com`) | Your own character's name and server, to find its armory id so "Open in aion2-tools" can open it directly | Only when you click "Link my armory" in the Gear window (from 0.13.0), once per character. The meter never looks your own character up by itself. abysslogs.com is not asked |
 | **abysslogs.com** (`api.abysslogs.com`) | The same name and server, to show their rank on the card | Only while ⚙ "abysslogs ranks" is on, together with an armory look-up. Turn it off and nothing is sent there |
 | **GitHub** (`raw.githubusercontent.com`) | A request for `latest.json` in this repository, with the user agent `Aion2DPSMeter/<version> (update check)`. GitHub sees your IP address and the meter's version. Nothing else is sent | 30 s after start, then every 6 h, while ⚙ "Check for updates" is on; and when you click "Check now" |
 | **GitHub** (`raw.githubusercontent.com`) | The download of the new kit | Only when you click "Update now" |
@@ -17,11 +18,13 @@ Defaults: "abysslogs ranks", "Check for updates", "Load icons from NCSOFT" and "
 Two buttons open a page in **your browser** instead, and only when you click them:
 
 - the aion2-tools party check, whose link contains the party's names and servers;
+- "Open in aion2-tools" in the Gear window (from 0.13.0), whose link contains the character's server and either its name or, after "Link my armory", its armory id;
 - a player's abysslogs.com page.
 
 ## What it never sends
 
 - **Combat logs or fight data.** Damage, skills, buffs and the fight history are kept only on your PC.
+- **Your gear.** The Gear window (from 0.13.0) scores items on your PC with aion2-tools' tables, which ship inside the meter; no item is sent anywhere to be scored.
 - **Other players' data to any server of ours.** There is no server of ours. Names go only to the armory and abysslogs look-ups above.
 - **Telemetry**: no analytics, usage statistics or automatic crash reports.
 - **The game traffic itself.** The meter does not upload it, and it never sends anything to the game.
@@ -38,6 +41,7 @@ Two buttons open a page in **your browser** instead, and only when you click the
   - the game builds you marked as verified;
   - the field-boss timers, alert choices and your pet collection (`world.json`, `pets.json`; no player names);
   - your own characters' tickets and energy (`tickets.json`, from 0.9.0): their names, server, class, when you last played them, the ticket counts and memberships the game sent. Only characters that logged in while the meter ran; "Forget" in the Tickets window removes one;
+  - your own characters' gear (`gear.json`, from 0.13.0): their names and server, their equipped, bag and warehouse items, Exchange purchases, enchant attempts and re-engraves, and the armory id once you clicked "Link my armory". Only characters that logged in while the meter ran. **Players you inspect are never stored**: their gear is held in memory until you quit;
   - update downloads (deleted once installed).
 - `%LOCALAPPDATA%\Aion2DPSMeter\logs\meter.log`: a diagnostic log, rewritten at each start. It contains no player names.
 - `%LOCALAPPDATA%\dev.sylfael.aion2dpsmeter\`: the app's web view data, which holds the ⚙ settings.
