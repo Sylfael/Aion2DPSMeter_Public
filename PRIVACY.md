@@ -28,7 +28,7 @@ Two buttons open a page in **your browser** instead, and only when you click the
 - **Other players' data to any server of ours.** There is no server of ours. Names go only to the armory and abysslogs look-ups above.
 - **Telemetry**: no analytics, usage statistics or automatic crash reports.
 - **The game traffic itself.** The meter does not upload it, and it never sends anything to the game.
-- **Pictures of your screen.** "Hide in game menus" (from 0.8.0) looks at small parts of the game window on your PC to notice an open menu; nothing is saved or sent.
+- **Pictures of your screen.** "Hide in game menus" (from 0.8.0) looks at small parts of the game window on your PC to notice an open menu; nothing is sent. From 0.14.0, if the game window's picture cannot be read, it copies the part of the screen under the game instead, the same way. A picture is saved only when you press "Save debug snapshot" or "Teach a menu" in Settings → Capture (see below); "Copy diagnostics" copies text without names to your clipboard, and you decide whether to send it.
 - **Frame timing.** ⚙ "Game FPS" (from 0.9.0, off by default) reads only the frame-timing events (DXGI "Present") that Windows' event tracing (ETW) reports for the game's process, and counts them per second. It does not touch the game or read its memory. Nothing is saved or sent.
 - **Your ping.** The status bar's ping (from 0.9.0) comes from the times of the game's own ping messages and its answers in the traffic the meter already reads; only the time and size of the game's outgoing packets are used, never their content. Nothing is sent.
 
@@ -42,7 +42,10 @@ Two buttons open a page in **your browser** instead, and only when you click the
   - the field-boss timers, alert choices and your pet collection (`world.json`, `pets.json`; no player names);
   - your own characters' tickets and energy (`tickets.json`, from 0.9.0): their names, server, class, when you last played them, the ticket counts and memberships the game sent. Only characters that logged in while the meter ran; "Forget" in the Tickets window removes one;
   - your own characters' gear (`gear.json`, from 0.13.0): their names and server, their equipped, bag and warehouse items, Exchange purchases, enchant attempts and re-engraves, and the armory id once you clicked "Link my armory". Only characters that logged in while the meter ran. **Players you inspect are never stored**: their gear is held in memory until you quit;
+  - menu checks you taught (`menus/`, from 0.14.0): small crops of the game's menus;
+  - debug snapshots (`menu-debug/`, from 0.14.0), only when you press "Save debug snapshot": a picture of the game window, which can show your character name and chat, and the match scores. Delete the folder any time;
   - update downloads (deleted once installed).
+- Your theme (from 0.14.0) is kept with the app's settings. "Export" writes it to `Documents\Aion2DPSMeter\`; a theme file holds only sizes and colours.
 - `%LOCALAPPDATA%\Aion2DPSMeter\logs\meter.log`: a diagnostic log, rewritten at each start. It contains no player names.
 - `%LOCALAPPDATA%\dev.sylfael.aion2dpsmeter\`: the app's web view data, which holds the ⚙ settings.
 
