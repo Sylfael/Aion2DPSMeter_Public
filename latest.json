@@ -1,15 +1,15 @@
 {
   "format": "a2meter-update/1",
-  "version": "0.12.1",
-  "published": "2026-11-06T23:08:57Z",
-  "notes": "# Aion2DPSMeter 0.12.1\n\nTwo fixes to the Healing tab.\n\n- **Critical heals show \"—\" instead of 0.0 %.** Heals do not crit in this game: we checked over 28,000 heals from several recorded sessions, and none of them is marked as a crit or comes out bigger the way a crit would. The same healers' attacks crit about half the time, so the meter does read crits; heals just don't have them. The crit column and the crit tile now show \"—\", and hovering them says why. The meter's row tooltip no longer says \"crit heals 0.0 %\".\n- **The healing chart is easier to read.** The chart under the boss HP line used to scale to the single biggest second of healing, so one big burst (say 39k when the fight averaged 4.4k) squashed everything else into a flat strip. It now scales to the usual high level of healing (the 95th percentile) and cuts off the few bigger seconds at the top, with a small ▲ over each one. Hover a ▲ to see its time and value. The legend still shows the peak.\n- A rare case where an ally's attack could be counted as a heal is now counted as damage.",
+  "version": "0.13.0",
+  "published": "2026-11-07T00:16:48Z",
+  "notes": "# Aion2DPSMeter 0.13.0\n\nGear: your items, how good their lines and stones are, and what to reroll next.\n\n- **A new Gear window** (tray → \"Gear…\"). The game sends your whole inventory when you log in, and the meter reads it from the same traffic it already reads for damage. The window lists what you wear, what is in your bag and warehouse, what you bought on the Exchange, and your enchant attempts and manastone re-engraves. It also shows the gear of players you inspect in game. Each of your characters keeps its own page; pick one at the top.\n- **Scores from aion2-tools.** Every piece gets two numbers: how close its soul-binding lines and its manastones are to the best this item can roll, for the build you pick at the top (the build's stat weights are aion2-tools' estimates, not official). The window also says what to do next (\"Sync line 2, 58 %\" means one Sync of that line has a 58 % chance to roll something better; \"Re-engrave 80 %\", \"Reset\"). Click a row to see each line, each stone, the odds and the recent upgrades of that piece; \"Copy as text\" copies it all. Items with fixed lines (no soul binding, such as some bracelets) are marked \"fixed\" and never get Sync advice. Arcana show their god stat; aion2-tools plans Arcana in its own planner, so they get no score here.\n- **Open in aion2-tools.** A button in each item's panel opens your character in aion2-tools in your browser. Click \"Link my armory\" once at the top of the Gear window and the button opens your character directly. Without it, aion2-tools looks the character up first. \"Link my armory\" asks the official armory about your character once, and only when you click it.\n- **Optional toast.** Settings → Alerts → Gear (\"New piece beats equipped\") can show a short message over the meter when a piece you loot or buy beats what you wear in that slot. It is off by default.\n- **Manastone values checked against the Global armory.** The game names the stone, the stat and the tier but not the value, so the meter takes the value from NCSOFT's published tables. We compared them with the official Global armory for 32 sockets on 8 items, and all 32 matched.\n- Inspected players are kept only until you quit. Your own characters' gear is saved on your PC (`gear.json`) so the window is filled before your next login.",
   "min_version": null,
   "assets": [
     {
-      "name": "Aion2DPSMeter-kit-0.12.1.zip",
-      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.12.1/Aion2DPSMeter-kit-0.12.1.zip",
-      "size": 6776849,
-      "sha256": "23b808d4d356f8c8b090b1cdffc5fd5932ea8552b52f0c4e3801f761a73913e6"
+      "name": "Aion2DPSMeter-kit-0.13.0.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.13.0/Aion2DPSMeter-kit-0.13.0.zip",
+      "size": 7208318,
+      "sha256": "f112452b5f11a9c1beb86a73e0fbe5690b35791ce92ef7ffe04b6c982db4440c"
     }
   ],
   "signature": null
