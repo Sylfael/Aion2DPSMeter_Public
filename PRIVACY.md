@@ -37,7 +37,7 @@ Two buttons open a page in **your browser** instead, and only when you click the
 
 - `%APPDATA%\dev.sylfael.aion2dpsmeter\`:
   - the fight history (up to 300 fights or 512 MiB);
-  - your notes and black or white lists for players;
+  - your notes and black or white lists for players ("Export" in Settings → Party, from 0.17.0, writes them with the players' names to a file in `Documents\Aion2DPSMeter\` that you choose to keep or share);
   - the overlay's position;
   - the game builds you marked as verified;
   - the field-boss timers, alert choices and your pet collection (`world.json`, `pets.json`; no player names);
