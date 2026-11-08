@@ -24,6 +24,7 @@ Two buttons open a page in **your browser** instead, and only when you click the
 ## What it never sends
 
 - **Combat logs or fight data.** Damage, skills, buffs and the fight history are kept only on your PC.
+- **Share images.** The share button puts an image of the fight on your clipboard (or saves it in `Documents\Aion2DPSMeter\`); nothing is uploaded. Where you paste it is up to you, and "Hide other players' names" replaces their names with their class.
 - **Your gear.** The Gear window (from 0.13.0) scores items on your PC with aion2-tools' tables, which ship inside the meter; no item is sent anywhere to be scored.
 - **Other players' data to any server of ours.** There is no server of ours. Names go only to the armory and abysslogs look-ups above.
 - **Telemetry**: no analytics, usage statistics or automatic crash reports.
@@ -44,6 +45,7 @@ Two buttons open a page in **your browser** instead, and only when you click the
   - your own characters' gear (`gear.json`, from 0.13.0): their names and server, their equipped, bag and warehouse items, Exchange purchases, enchant attempts and re-engraves, and the armory id once you clicked "Link my armory". Only characters that logged in while the meter ran. **Players you inspect are never stored**: their gear is held in memory until you quit;
   - menu checks you taught (`menus/`, from 0.14.0): small crops of the game's menus;
   - debug snapshots (`menu-debug/`, from 0.14.0), only when you press "Save debug snapshot": a picture of the game window, which can show your character name and chat, and the match scores. Delete the folder any time;
+  - your personal bests (`records.json`, from 0.16.0): for each boss, your own characters' best DPS, fastest kill and last 20 runs (date, DPS, length, party DPS, deaths). Only your own characters' names are kept; delete the file to reset them (it is rebuilt from the fight history);
   - update downloads (deleted once installed).
 - Your theme (from 0.14.0) is kept with the app's settings. "Export" writes it to `Documents\Aion2DPSMeter\`; a theme file holds only sizes and colours.
 - `%LOCALAPPDATA%\Aion2DPSMeter\logs\meter.log`: a diagnostic log, rewritten at each start. It contains no player names.
