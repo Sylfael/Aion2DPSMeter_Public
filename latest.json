@@ -1,15 +1,15 @@
 {
   "format": "a2meter-update/1",
-  "version": "0.15.1",
-  "published": "2026-11-07T14:28:16Z",
-  "notes": "# Aion2DPSMeter 0.15.1\n\nTwo fixes and a small addition.\n\n- **Death count on the \"dead\" tag.** A player who died more than once in the fight shows \"dead ×2\", \"dead ×3\"… instead of just \"dead\".\n- **Boss fight timer fixed when someone tagged the boss first.** If another player hit a boss and ran, and it reset, the meter timed the fight from that hit, so your party's DPS read far too low (2:17 instead of 0:56 on Judge Urahum). Such a tag is no longer a fight: the clock starts at the real pull. Damage and shares were already right.\n- **Hide in game menus:** a loading screen no longer switches the capture to the screen copy for the rest of the session (it takes 30 s of black frames now, not 5 s).",
+  "version": "0.15.2",
+  "published": "2026-11-08T15:51:08Z",
+  "notes": "# Aion2DPSMeter 0.15.2\n\nYour saved settings now apply from the start, and the party inspector opens and looks players up when it should.\n\n- **Settings that were ignored until you changed them.** When the meter starts, the overlay sends your saved settings to the core. Some of them arrived while the meter was still starting and were lost, so the core kept its defaults for the whole session: hide in game menus and its capture method, the inspector's automatic open and lookup, abysslogs ranks, \"Boss fights only\", \"Show in taskbar\" and idle hide. That is why menu detection sometimes needed a toggle to work, and why the inspector rarely opened by itself. These settings are now sent again until the meter is ready.\n- **The inspector opens when you join a party** (new default; Settings → Party → \"Open when you join a party\"). If you changed that setting before, check it once.\n- **Opening the inspector looks everyone up.** When you open it yourself, every listed applicant and member without a lookup yet is looked up on the official armory; no more clicking each card.\n- **An applicant who arrives right after you closed the inspector** is held back for 20 s as before, but now opens it when they apply again. Before, they stayed hidden for 30 minutes.",
   "min_version": null,
   "assets": [
     {
-      "name": "Aion2DPSMeter-kit-0.15.1.zip",
-      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.15.1/Aion2DPSMeter-kit-0.15.1.zip",
-      "size": 7524239,
-      "sha256": "2f3703a72d71bf6be66ff816000a4e8114762f6090b36cd357be28298447d47d"
+      "name": "Aion2DPSMeter-kit-0.15.2.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.15.2/Aion2DPSMeter-kit-0.15.2.zip",
+      "size": 7536608,
+      "sha256": "22c06845dd3aa097c0f85ca0c554d7dc5f25d15f26866a72b303507b506544c7"
     }
   ],
   "signature": null
