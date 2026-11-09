@@ -19,7 +19,8 @@ Two buttons open a page in **your browser** instead, and only when you click the
 
 - the aion2-tools party check, whose link contains the party's names and servers;
 - "Open in aion2-tools" in the Gear window (from 0.13.0), whose link contains the character's server and either its name or, after "Link my armory", its armory id;
-- a player's abysslogs.com page.
+- a player's abysslogs.com page; from 0.18.0, opening a player's row in the inspector (▾) also asks abysslogs for that player's best public run on the room's boss (only if they show their runs there): their name and server, then that run's file;
+- from 0.18.0, "Count +ranks and score gear" (a click, or the ⚙ option "on every look-up", off by default) reads each equipped item's page on the official armory: about 21 requests per player, with the same name and server.
 
 ## What it never sends
 
@@ -46,6 +47,9 @@ Two buttons open a page in **your browser** instead, and only when you click the
   - menu checks you taught (`menus/`, from 0.14.0): small crops of the game's menus;
   - debug snapshots (`menu-debug/`, from 0.14.0), only when you press "Save debug snapshot": a picture of the game window, which can show your character name and chat, and the match scores. Delete the folder any time;
   - your personal bests (`records.json`, from 0.16.0): for each boss, your own characters' best DPS, fastest kill and last 20 runs (date, DPS, length, party DPS, deaths). Only your own characters' names are kept; delete the file to reset them (it is rebuilt from the fight history);
+  - what your fights saw of other players (`people.json`, from 0.18.0): for each player in your fights, their name and server, the specialties of their skills as last seen, how many fights you shared and the last date;
+  - runs with other players (`together.json`, from 0.18.0): for each player you fought a boss beside, the date, boss, DPS, share and deaths of your last 20 fights together, and their skill shares in the latest long kill. Rebuilt from the fight history when deleted;
+  - rank snapshots (`trend.json`, from 0.18.0): for players you looked up with abysslogs ranks on, one point per day (rank for the room's dungeon, a DPS estimate, CP), at most 60 per player; players not looked up for 90 days are dropped;
   - update downloads (deleted once installed).
 - Your theme (from 0.14.0) is kept with the app's settings. "Export" writes it to `Documents\Aion2DPSMeter\`; a theme file holds only sizes and colours.
 - `%LOCALAPPDATA%\Aion2DPSMeter\logs\meter.log`: a diagnostic log, rewritten at each start. It contains no player names.
