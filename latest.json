@@ -1,15 +1,15 @@
 {
   "format": "a2meter-update/1",
-  "version": "0.19.0",
-  "published": "2026-11-09T14:44:26Z",
-  "notes": "# Aion2DPSMeter 0.19.0\n\nA player's best public parse, more often, and as soon as they apply.\n\n- **Best public parse on every row.** When the inspector looks someone up (it opens itself for new applicants and when you join a party), it also looks for their best public parse: first their runs on abysslogs if they show them, then the public Global ranking. The row shows it compactly (\"61k · top 4.0 % · 3 Nov · ranking\"), and the details show the kill, its length and a per-skill table, which the rotation hints use too. Players with no public parse simply show \"no public parse\", never a flag.\n- **Polite and bounded.** Cheap checks come first; the big downloads run only when a player actually has a parse, wait while you are in a fight, and stop at 200 MB per session (a click on \"fetch\" still works). Nothing from these files is kept on disk, and the ranking is asked by two characters of a hash: your applicants' names are never sent to it. Players who hid their name on that ranking show nothing. Settings → Party → \"Best public parse\" (on) turns it off.\n- **The right boss.** A run on abysslogs is a whole dungeon; the inspector now picks the room's boss from it instead of the run's last pull.\n- **\"View on AionFlex\"** link in a player's details.",
+  "version": "0.19.1",
+  "published": "2026-11-09T18:02:58Z",
+  "notes": "# Aion2DPSMeter 0.19.1\n\nFixes for windows that could block your clicks, a DPS fix on bosses that turn damage into HP, and a smarter party inspector.\n\n- **No more windows that block clicks.** An inspector or World window that opened by itself could not be closed with its X, and with \"Inspector on top\" it stayed over the game. It now closes normally. The toast strip above the meter also hides itself if it ever stays up with nothing in it, and a faded or hidden meter always lets clicks through.\n- **DPS too high on bosses that turn damage into HP.** Some bosses (Thamon) carry buffs that convert part of the damage they take into HP. The game reports that converted part as a damage-over-time tick from the attacker, and the meter counted it a second time, mostly for magic classes (an Elementalist read about 39 % too high on Thamon). Those ticks are no longer counted as damage; Fight details now shows \"boss HP lost … · … absorbed by the boss\" so the numbers add up.\n- **Unstick without restarting.** Tray → \"Reset windows (unstick)\" puts the meter back to normal (shown, not faded, toasts hidden, click-through re-applied). Ctrl+Shift+M (click-through) also clears stuck states, and Ctrl+Shift+H hides every meter window.\n- **Better logs for reports.** Window changes are written to meter.log, and the previous session's log is kept as `meter.prev.log` next to it: send both after a problem, before restarting the meter twice.\n- **Public parses without abysslogs ranks.** The inspector finds the room's boss from the dungeon (18 Conquest, Exploration and Raid modes), so the best-parse search starts even when abysslogs ranks are off or not in yet.\n- **Party forecast from real numbers.** Each player's DPS comes from your own kills with them, then their public run or ranking kill, and only then from the abysslogs estimate; the tooltip says which.",
   "min_version": null,
   "assets": [
     {
-      "name": "Aion2DPSMeter-kit-0.19.0.zip",
-      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.19.0/Aion2DPSMeter-kit-0.19.0.zip",
-      "size": 8437465,
-      "sha256": "d03bf6a3daa5e446635ce0dc6ae94066c73d8ccb35b23fe9747df18210c8884d"
+      "name": "Aion2DPSMeter-kit-0.19.1.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.19.1/Aion2DPSMeter-kit-0.19.1.zip",
+      "size": 8469070,
+      "sha256": "fdf6b6802b33aefc202379f703c89b6d8b55387fa1dde473b43811403135d7a9"
     }
   ],
   "signature": null
