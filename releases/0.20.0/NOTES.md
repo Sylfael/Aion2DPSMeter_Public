@@ -1,0 +1,14 @@
+# Aion2DPSMeter 0.20.0
+
+# Aion2DPSMeter 0.20.0
+
+Boss phases, gear advice, Arcana grades, a self-check, and alerts that show while the meter rests.
+
+- **Boss phases.** For bosses with a known mechanic (Ferocious Horn Nuakum at 77 / 52 / 28 %, Watchdog Kwapo, Necromancer Duanka, Siliator of Deceit, Talisra of the Void), Fight details draws phase lines on the timeline, and a Combined / P1 / P2… picker shows the numbers of one phase; Compare can compare the same phase of two fights. Bosses without known phases are unchanged (drag a range to split them yourself).
+- **Gear upgrade advice.** Each item's best next step, with its chance and expected gain in aion2-tools' model ("Sync 3, 96 % +5.6 % exp.", "Re-engrave", "keep"), every option in the item's panel, and "Best next upgrades" at the top of your equipped gear. Known costs are shown (Reset, re-engrave fee); none are invented.
+- **Graded from Unique up.** Items below Unique (gold) are no longer graded: no score, no advice, not in the averages.
+- **Arcana graded at every rarity.** Each card gets "% of best for its grade" and "% of a max Unique" from its pantheon stat, set and skills (aion2-tools' Arcana model), with a next step ("Enhance to +N", "Transmute: Unique, skill A + B" with its cost) and their own average. The inspector's gear score grades them too.
+- **Self-check** (Settings → About → Run self-check). About 20 seconds of checks on your PC — every window shows and hides properly and never blocks your clicks, a test toast, hotkeys, menu detection, clipboard, saving files, the sites the meter uses, updates, FPS permission — then "Copy report" gives a text without names to send us. Windows flash briefly while it runs; nothing touches the game.
+- **Alerts while the meter rests.** World, pet, gear, record and applicant alerts now show while the meter is idle (faded or hidden); they still hide over a game menu and with Ctrl+Shift+H.
+- **One "history" chip** in the inspector: runs with you and their rank trend together ("3 runs · 31.2k · ↑ 22→8.5 %").
+- **Bosses that heal from damage.** The fix from 0.19.1 now reads a small list of such buffs, and every boss's own damage-to-HP buffs are recognised, so the DPS stays right on them.
