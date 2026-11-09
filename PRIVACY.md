@@ -14,6 +14,8 @@ Aion2DPSMeter reads the game's network traffic on your own PC. Everything it mea
 | **GitHub** (`raw.githubusercontent.com`) | The download of the new kit | Only when you click "Update now" |
 | **NCSOFT's image server** (`assets.playnccdn.com`) | Requests for the game's own skill, buff and class icons. NCSOFT sees your IP address and which icons are shown. No names, numbers or fight data are sent | While ⚙ "Load icons from NCSOFT" is on (from 0.8.0), when a window shows an icon. Turn it off and nothing is fetched |
 
+The **self-check** (Settings → About, from 0.20.0, only when you run it) sends one small request to each of the hosts above that the meter already uses (the update manifest, the armory, abysslogs if its ranks are on, the public ranking pointer if "Best public parse" is on) to measure whether they answer; no name is sent. Its "Copy report" text contains no player names.
+
 Defaults: "abysslogs ranks", "Check for updates", "Load icons from NCSOFT" and "Open inspector on new applicants" are **on** when you first start the meter. "Look up automatically" is off. Turn off in ⚙ what you do not want.
 
 Two buttons open a page in **your browser** instead, and only when you click them:
