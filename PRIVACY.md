@@ -8,7 +8,8 @@ Aion2DPSMeter reads the game's network traffic on your own PC. Everything it mea
 |---|---|---|
 | **NCSOFT's official armory** (`api-search.plaync.com`, `aion2.plaync.com`) | The character name and server of a party applicant or member, to read their public profile (gear, item level, combat power) | When a look-up runs: you click it, the inspector opens itself for new applicants (⚙ "Open inspector on new applicants"), or ⚙ "Look up automatically" is on |
 | **NCSOFT's official armory** (`api-search.plaync.com`, `aion2.plaync.com`) | Your own character's name and server, to find its armory id so "Open in aion2-tools" can open it directly | Only when you click "Link my armory" in the Gear window (from 0.13.0), once per character. The meter never looks your own character up by itself. abysslogs.com is not asked |
-| **abysslogs.com** (`api.abysslogs.com`) | The same name and server, to show their rank on the card | Only while ⚙ "abysslogs ranks" is on, together with an armory look-up. Turn it off and nothing is sent there |
+| **abysslogs.com** (`api.abysslogs.com`) | The same name and server, to show their rank on the card. From 0.19.0, when they show their runs there: their runs on the room's boss, then that run's file from abysslogs' own storage | Only while ⚙ "abysslogs ranks" is on, together with an armory look-up (the runs: with each look-up while ⚙ "Best public parse" is on). Turn it off and nothing is sent there |
+| **GitHub** (`raw.githubusercontent.com`, the public repositories `Not4You-Dev/NotMeter-Global-Ranking-Cache` and `Not4You-Dev/NotMeter-Global-Combat`) | The public Global ranking files that notmeter.com shows on its website: a small pointer file, the ranking's index (about 1.5 MB, once per session), one 2.5 MB index shard chosen by two characters of a hash of the player's name, server and class (**the name itself is never sent**; the match happens on your PC), and, when the player placed in a top 20 with their name shown, that board and one detail file. Players who hid their name on that site, or never placed in a top 20, show as "no public parse". Nothing from these files is kept on disk | From 0.19.0, with each look-up while ⚙ "Best public parse" is on (on by default; at most 200 MB per session automatically). Turn it off and nothing is asked of GitHub except the update check and the downloads you click |
 | **GitHub** (`raw.githubusercontent.com`) | A request for `latest.json` in this repository, with the user agent `Aion2DPSMeter/<version> (update check)`. GitHub sees your IP address and the meter's version. Nothing else is sent | 30 s after start, then every 6 h, while ⚙ "Check for updates" is on; and when you click "Check now" |
 | **GitHub** (`raw.githubusercontent.com`) | The download of the new kit | Only when you click "Update now" |
 | **NCSOFT's image server** (`assets.playnccdn.com`) | Requests for the game's own skill, buff and class icons. NCSOFT sees your IP address and which icons are shown. No names, numbers or fight data are sent | While ⚙ "Load icons from NCSOFT" is on (from 0.8.0), when a window shows an icon. Turn it off and nothing is fetched |
@@ -57,6 +58,6 @@ Two buttons open a page in **your browser** instead, and only when you click the
 
 - `Documents\Aion2DPSMeter\`: pet exports, only when you click "Export for aion2-tools".
 
-Looked-up profiles are held in memory only.
+Looked-up profiles are held in memory only; so are public parses (from 0.19.0).
 
 To remove everything, quit the meter, then delete its folder and the three folders above.
