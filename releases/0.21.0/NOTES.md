@@ -1,0 +1,15 @@
+# Aion2DPSMeter 0.21.0
+
+# Aion2DPSMeter 0.21.0
+
+No new features: this release makes the meter safer to rely on. It is the first step toward 1.0.
+
+- **The meter says when its numbers may be wrong.** A small amber "?" next to the party DPS marks a fight where packets were lost, hits could not be read, or the damage and the boss's HP disagree; hover it for the reason. Fights without the mark are as checked as before.
+- **A game patch no longer fails silently.** If you are clearly fighting and the meter cannot read any damage, a red line says "The game changed; the meter cannot read damage. An update is needed." The amber "unverified protocol" line is gone for normal play: a new game build is checked quietly and trusted after three clean boss kills.
+- **The meter cannot go blind.** If its core hits an internal error it restarts by itself and tells you (the fight in progress is lost). If it stops answering, the overlay dims and says "Not updating" instead of showing old numbers as if they were live. Error boxes no longer jump in front of the game.
+- **Your data is never dropped quietly.** A data file that cannot be read is kept aside as a dated copy and a notice names it, instead of starting empty. A file saved by a newer version is never overwritten by an older one, so rolling back is safe from this version on. A fight that could not be saved is retried.
+- **Updates that fail are undone.** After an update, the old version waits for the new one to finish starting (up to 90 seconds). If it does not, the files are put back, the old version starts again and tells you, and that version is not offered again. This protects every update after this one (0.20.0 does not have it yet).
+- **Settings apply from the first second.** The meter keeps its own copy of your settings and applies it at start, before any window opens.
+- **Lighter in the background.** Closed windows no longer ask for data (Fight details asked every second, even closed), and actions no longer freeze the windows while the meter is busy.
+- **Small fixes.** A hung overlay lets your clicks through. Starting the meter twice brings the running one back and no longer wipes its log. When the game's connection closes, the fight ends at once. The idle strip's text no longer runs together, and the status bar keeps its alert chip at narrow widths.
+- **In the download:** `NOTICE.txt` and `THIRD-PARTY-NOTICES.txt` (the licences of the libraries and data the meter uses). The privacy page was corrected line by line against what the meter really does; nothing about its behaviour changed.
