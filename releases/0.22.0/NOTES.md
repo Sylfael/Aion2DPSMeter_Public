@@ -11,9 +11,9 @@ Fewer windows, a tidier overlay, one name for each thing. This is the last versi
   - **World, Tickets and Pets** are now three tabs of one window, **Tracker**. It opens where your World window was. Alerts, the Odyle number in the status bar and the pet notice open it on the right tab.
 - **One name per thing.** The window with applicants and party members is called **Party** everywhere. "eDPS" is now simply **DPS** (the number is the same). "Boss fights only" is the same checkbox in More, in Settings and in the tray menu.
 - **Small fixes.**
-  - The meter no longer shows a brief "Not updating" after the PC wakes from sleep or the clock changes.
+  - The meter no longer shows a brief "Not updating" when the PC's clock changes.
   - If the meter's core keeps failing slowly (more than ten restarts in an hour), it now stops and says so instead of restarting for ever.
-  - An update no longer ends with no meter running when the old version is slow to close.
+  - From the update after this one on: an update no longer ends with no meter running when the old version is slow to close.
   - Decode errors turn the capture dot amber.
 
 If you roll back to 0.21.0, your old windows come back at their old places.

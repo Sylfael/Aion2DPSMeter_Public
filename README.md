@@ -1,6 +1,6 @@
 # Aion2DPSMeter (beta releases)
 
-Aion2DPSMeter is a damage meter for **AION 2** on Windows. It reads the game's network traffic on your own PC (with Npcap) and shows your party's damage in a small overlay. There is also a fight details window (skills, buffs, damage taken, recent fights), an inspector for party applicants and members, and windows for field bosses, tickets, pets, gear and personal records.
+Aion2DPSMeter is a damage meter for **AION 2** on Windows. It reads the game's network traffic on your own PC (with Npcap) and shows your party's damage in a small overlay. There is also a Fight details window (skills, buffs, damage taken, recent fights, your personal records), a Party window for applicants and members, a Tracker window for field bosses, tickets and pets, and a Gear window.
 
 This repository only holds the **release files** and the update manifest (`latest.json`). The source code is private.
 
