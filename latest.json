@@ -1,15 +1,15 @@
 {
   "format": "a2meter-update/1",
-  "version": "0.22.1",
-  "published": "2026-11-10T15:46:30Z",
-  "notes": "# Aion2DPSMeter 0.22.1\n\nFour small fixes on top of 0.22.0. Nothing else changed.\n\n- **Fight details keeps the fight you picked.** Clicking the personal-best notice, \"Open Records\" in Settings, or Fight details in the tray menu no longer jumps back to the overlay's fight. The Fight details button on the overlay still shows the overlay's fight.\n- **Tracker stays on the screen.** When Tracker takes over the place of your old World window (the first start after 0.21.0), it is now kept inside the screen, also on a laptop at 150 % scale.\n- **A clearer notice when a part of the meter keeps failing.** It now says the part is failing repeatedly and still trying, and the notice goes away when it works again. Before, it said \"stopped\" and stayed until you quit.\n- **From the update after this one on:** if you start the meter yourself while an update is finishing, you no longer get an \"already running\" message.",
+  "version": "0.23.0",
+  "published": "2026-11-11T02:11:39Z",
+  "notes": "# Aion2DPSMeter 0.23.0\n\nThree new things before the meter is frozen for testing, and Quit no longer loses a fight.\n\n- **Phase thresholds on the boss HP bar.** For bosses the meter knows, small marks on the overlay's boss HP bar show the HP at which the next phases usually start, so you see them coming. The next one stands out in blue and is also written as text (\"next 52%\"); the ones you passed turn dim. Fight details shows the same thresholds as dashed lines on the boss HP line. The thresholds come from past recordings and can differ by a few points; bosses the meter does not know get no marks.\n- **Dungeon run times.** The meter times each dungeon run with the game's own clock, from the moment the run starts (the end of the entry wait) to the clear. After a clear the overlay shows the run next to the last one, for example \"Run 5:06 · last 5:42 · −36 s\" (green when faster, red when slower, \"new best\" when it is). The Records tab of Fight details has a new \"Dungeon runs\" section: per dungeon and difficulty (and per Nightmare boss) your best and last runs, and a click shows the last 20. Only cleared runs count. The times are kept in a new file, `runs.json`, next to your other meter files.\n- **CP and gear score next to the names (off by default).** Settings → Overlay → Rows has two new switches, Show CP and Show gear score. When on, each player's CP and gear score are written after the name, when the meter knows them. Nothing new is looked up. When the overlay is narrow, the numbers give way so the names and DPS stay readable.\n- **Quit saves the fight in progress.** Quitting the meter (tray or More → Quit, or an update) now ends and saves the running fight, as Reset fight does.\n- **Records updates by itself** when a run is cleared while the tab is open, and Settings → Privacy lists the new run times file.",
   "min_version": null,
   "assets": [
     {
-      "name": "Aion2DPSMeter-kit-0.22.1.zip",
-      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.22.1/Aion2DPSMeter-kit-0.22.1.zip",
-      "size": 9256265,
-      "sha256": "7e7ed443c3322d28ae4c0577683516043321e9f1b83317679c74ea0bbee1e027"
+      "name": "Aion2DPSMeter-kit-0.23.0.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.23.0/Aion2DPSMeter-kit-0.23.0.zip",
+      "size": 9324595,
+      "sha256": "53b9f676e1aa7be2c3b1d42f55db7e2d3765d97a67807d15cb7345eb2772c9a2"
     }
   ],
   "signature": null
