@@ -1,15 +1,15 @@
 {
   "format": "a2meter-update/1",
-  "version": "0.23.0",
-  "published": "2026-11-11T02:11:39Z",
-  "notes": "# Aion2DPSMeter 0.23.0\n\nThree new things before the meter is frozen for testing, and Quit no longer loses a fight.\n\n- **Phase thresholds on the boss HP bar.** For bosses the meter knows, small marks on the overlay's boss HP bar show the HP at which the next phases usually start, so you see them coming. The next one stands out in blue and is also written as text (\"next 52%\"); the ones you passed turn dim. Fight details shows the same thresholds as dashed lines on the boss HP line. The thresholds come from past recordings and can differ by a few points; bosses the meter does not know get no marks.\n- **Dungeon run times.** The meter times each dungeon run with the game's own clock, from the moment the run starts (the end of the entry wait) to the clear. After a clear the overlay shows the run next to the last one, for example \"Run 5:06 · last 5:42 · −36 s\" (green when faster, red when slower, \"new best\" when it is). The Records tab of Fight details has a new \"Dungeon runs\" section: per dungeon and difficulty (and per Nightmare boss) your best and last runs, and a click shows the last 20. Only cleared runs count. The times are kept in a new file, `runs.json`, next to your other meter files.\n- **CP and gear score next to the names (off by default).** Settings → Overlay → Rows has two new switches, Show CP and Show gear score. When on, each player's CP and gear score are written after the name, when the meter knows them. Nothing new is looked up. When the overlay is narrow, the numbers give way so the names and DPS stay readable.\n- **Quit saves the fight in progress.** Quitting the meter (tray or More → Quit, or an update) now ends and saves the running fight, as Reset fight does.\n- **Records updates by itself** when a run is cleared while the tab is open, and Settings → Privacy lists the new run times file.",
+  "version": "0.23.1",
+  "published": "2026-11-12T14:14:20Z",
+  "notes": "# Aion2DPSMeter 0.23.1\n\nFixes from the first day on 0.23.0. Nothing new.\n\n- **A freeze fixed.** The meter could lock up for good when a window was closed or opened right after a window had been moved or resized. Every window open and close now also leaves a line in the log, and the log says when the meter stops answering, so a freeze that still happens can be traced.\n- **Clearer hit rates in Fight details.** Theostone ticks count as hits, and as they never crit or land from the back or the front, they lower every total rate a little. The hits tile now says how many of the hits are theostone ticks, and the rate tooltips also give each rate without them. No number changed.",
   "min_version": null,
   "assets": [
     {
-      "name": "Aion2DPSMeter-kit-0.23.0.zip",
-      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.23.0/Aion2DPSMeter-kit-0.23.0.zip",
-      "size": 9324595,
-      "sha256": "53b9f676e1aa7be2c3b1d42f55db7e2d3765d97a67807d15cb7345eb2772c9a2"
+      "name": "Aion2DPSMeter-kit-0.23.1.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.23.1/Aion2DPSMeter-kit-0.23.1.zip",
+      "size": 9332327,
+      "sha256": "ac8d11f50a7513cf270b4ac268b142f5b8901f77a0b92508e4b4e0b889c2e951"
     }
   ],
   "signature": null
