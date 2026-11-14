@@ -1,15 +1,15 @@
 {
   "format": "a2meter-update/1",
-  "version": "0.23.1",
-  "published": "2026-11-12T14:14:20Z",
-  "notes": "# Aion2DPSMeter 0.23.1\n\nFixes from the first day on 0.23.0. Nothing new.\n\n- **A freeze fixed.** The meter could lock up for good when a window was closed or opened right after a window had been moved or resized. Every window open and close now also leaves a line in the log, and the log says when the meter stops answering, so a freeze that still happens can be traced.\n- **Clearer hit rates in Fight details.** Theostone ticks count as hits, and as they never crit or land from the back or the front, they lower every total rate a little. The hits tile now says how many of the hits are theostone ticks, and the rate tooltips also give each rate without them. No number changed.",
+  "version": "0.24.0",
+  "published": "2026-11-14T23:53:56Z",
+  "notes": "# Aion2DPSMeter 0.24.0\n\nWhat each buff added to the party's damage.\n\n- **New Buffs tab in Fight details.** For each player in your party (at most 5), it shows their damage, how much of it came from other players' buffs (\"from others\"), how much their own buffs added to the others' damage (\"to others\"), and the result as rDPS: the damage per second with each buff's part moved to the player who cast it. A second list shows each buff and debuff that helped the party, with how much damage it added and its share of all the damage. Click one to see who it helped and how much damage was done while it was up.\n- **Estimates from measured values.** The buff values come from the meter's own measurements over many fights. Only damage increases are counted: combat speed, cooldown and critical hit effects are left out, and the tab names what it did not count. When two players cast the same buff, the higher skill level gets the credit. A buff only counts on a player it was actually seen on, and a debuff on the hits made while it was on the target.\n- **Party only.** Players outside your party are grouped on one line. Fights with no party, fights where the game does not send the other players' hits, and fights recorded before 0.24.0 show a short message instead of the table. After each fight the meter checks that the shares add up to the party's damage; when they do not, the tab says the fight could not be worked out rather than show wrong numbers.\n- **Fight files** now keep the party's buffs, so they are a little bigger. If you go back to an older version, fights saved by 0.24.0 stay in the list but cannot be opened there.",
   "min_version": null,
   "assets": [
     {
-      "name": "Aion2DPSMeter-kit-0.23.1.zip",
-      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.23.1/Aion2DPSMeter-kit-0.23.1.zip",
-      "size": 9332327,
-      "sha256": "ac8d11f50a7513cf270b4ac268b142f5b8901f77a0b92508e4b4e0b889c2e951"
+      "name": "Aion2DPSMeter-kit-0.24.0.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.24.0/Aion2DPSMeter-kit-0.24.0.zip",
+      "size": 9442338,
+      "sha256": "9738f528ea1795a24f53fde39954859c95b5a964ab7c19e1690701066c6486a9"
     }
   ],
   "signature": null
