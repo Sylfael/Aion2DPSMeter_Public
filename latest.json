@@ -1,15 +1,15 @@
 {
   "format": "a2meter-update/1",
-  "version": "0.24.0",
-  "published": "2026-11-14T23:53:56Z",
-  "notes": "# Aion2DPSMeter 0.24.0\n\nWhat each buff added to the party's damage.\n\n- **New Buffs tab in Fight details.** For each player in your party (at most 5), it shows their damage, how much of it came from other players' buffs (\"from others\"), how much their own buffs added to the others' damage (\"to others\"), and the result as rDPS: the damage per second with each buff's part moved to the player who cast it. A second list shows each buff and debuff that helped the party, with how much damage it added and its share of all the damage. Click one to see who it helped and how much damage was done while it was up.\n- **Estimates from measured values.** The buff values come from the meter's own measurements over many fights. Only damage increases are counted: combat speed, cooldown and critical hit effects are left out, and the tab names what it did not count. When two players cast the same buff, the higher skill level gets the credit. A buff only counts on a player it was actually seen on, and a debuff on the hits made while it was on the target.\n- **Party only.** Players outside your party are grouped on one line. Fights with no party, fights where the game does not send the other players' hits, and fights recorded before 0.24.0 show a short message instead of the table. After each fight the meter checks that the shares add up to the party's damage; when they do not, the tab says the fight could not be worked out rather than show wrong numbers.\n- **Fight files** now keep the party's buffs, so they are a little bigger. If you go back to an older version, fights saved by 0.24.0 stay in the list but cannot be opened there.",
+  "version": "0.24.1",
+  "published": "2026-11-18T00:36:12Z",
+  "notes": "# Aion2DPSMeter 0.24.1\n\nA smoother meter. No new feature and no change to any number.\n\n- **Turning \"Game FPS\" off no longer freezes the windows.** It could hold every window for up to a second.\n- **Closing a side window or changing a setting no longer waits for the disk.** Window positions and settings are now written in the background, within two seconds. If the meter is killed or crashes in the two seconds after you close a window, that window's last position is not kept.\n- **Lighter during long fights.** The live numbers are now kept up to date hit by hit instead of being recounted from the whole fight four times a second. The gain is largest in long fights with many players. The numbers are the same as in 0.24.0: this was checked on every recorded session.\n- **Fight details and hidden windows do less work.** A finished fight is prepared once instead of every second, and the Party and Settings windows do nothing while they are hidden.\n- After turning \"Game FPS\" off and on again quickly, the bar can read \"off\" for a few seconds before the frame rate comes back.",
   "min_version": null,
   "assets": [
     {
-      "name": "Aion2DPSMeter-kit-0.24.0.zip",
-      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.24.0/Aion2DPSMeter-kit-0.24.0.zip",
-      "size": 9442338,
-      "sha256": "9738f528ea1795a24f53fde39954859c95b5a964ab7c19e1690701066c6486a9"
+      "name": "Aion2DPSMeter-kit-0.24.1.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.24.1/Aion2DPSMeter-kit-0.24.1.zip",
+      "size": 9462434,
+      "sha256": "d00d8454f20c073995463be7f32ae438ef0783453c57a22588bc64755980921a"
     }
   ],
   "signature": null
