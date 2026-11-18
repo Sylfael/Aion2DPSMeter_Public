@@ -28,7 +28,7 @@ Only one meter runs at a time. Starting it again while it runs (it may be hidden
 
 - **5 seconds after the meter starts**, and then every 6 hours while it runs, it reads [`latest.json`](latest.json) from this repository. You can turn this off in ⚙ with "Check for updates".
 - When a newer version exists, the overlay and the tray say so, and Settings → About shows the release notes. **Nothing installs without your click.**
-- **Update now** downloads the kit from this repository only and checks its size and SHA-256 against `latest.json`. It then replaces the files and restarts the meter. The previous version stays next to it as `app\aion2dpsmeter.prev.exe`, and ⚙ "Roll back" returns to it. If any step fails, the files are put back. Every step is written to `%LOCALAPPDATA%\Aion2DPSMeter\logs\meter.log`.
+- **Update now** downloads the kit from this repository only and checks its size and SHA-256 against `latest.json`. It then replaces the files and restarts the meter. The previous version stays next to it as `app\aion2dpsmeter.prev.exe`, and "Roll back" returns to it (Settings → About, or since 0.24.2 the tray menu: "Roll back to … → Roll back and restart", which needs no window). If any step fails, the files are put back. Every step is written to `%LOCALAPPDATA%\Aion2DPSMeter\logs\meter.log`.
 - From 0.21.0, after an update the old version waits for the new one to finish starting (up to 90 seconds). If the new one closes or does not finish starting, the files are put back, the old version starts again, and a message says so. That version is then not offered again; a newer one will be. (The update from 0.20.0 to 0.21.0 itself is not protected this way: 0.20.0 does not have it yet.)
 - The meter only fetches from `raw.githubusercontent.com`, `github.com` and `objects.githubusercontent.com`, and only from this repository. These addresses are fixed in the program.
 
@@ -37,7 +37,7 @@ Only one meter runs at a time. Starting it again while it runs (it may be hidden
 ## If the meter will not start
 
 1. Look for it in the tray first: it may already be running, hidden. Only one meter runs at a time.
-2. After an update: start `app\aion2dpsmeter.prev.exe` (the previous version). In ⚙ → About, **Roll back** makes it the main version again.
+2. After an update: start `app\aion2dpsmeter.prev.exe` (the previous version). In ⚙ → About or in the tray menu, **Roll back** makes it the main version again.
 3. If that does not start either, go back by hand: quit every `aion2dpsmeter.exe` in Task Manager, then in the `app` folder rename `aion2dpsmeter.exe` to `aion2dpsmeter.bad.exe`, `aion2dpsmeter.prev.exe` to `aion2dpsmeter.exe`, and the same for `WebView2Loader.prev.dll` → `WebView2Loader.dll` if it is there. Start `aion2dpsmeter.exe`. If `aion2dpsmeter.exe` is missing altogether (the PC lost power during an update), just rename `aion2dpsmeter.prev.exe` to `aion2dpsmeter.exe`.
 4. Or download the kit of the version you had from [`releases/`](releases/) and unzip it over the old folder (your settings and fights are kept elsewhere, see [PRIVACY.md](PRIVACY.md)).
 5. Send `%LOCALAPPDATA%\Aion2DPSMeter\logs\meter.log` and `meter.prev.log` to the owner. They contain file paths with your Windows user name, but no player names.
