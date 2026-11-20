@@ -1,15 +1,15 @@
 {
   "format": "a2meter-update/1",
-  "version": "0.24.2",
-  "published": "2026-11-18T14:53:48Z",
-  "notes": "# Aion2DPSMeter 0.24.2\n\nA lighter meter while you play. No new feature and no change to any number.\n\n- **The overlay draws far less during a fight.** The red \"live\" dot no longer pulses and the boss HP bar no longer slides: both kept the overlay redrawing 60 times a second for the whole fight. It now redraws only when its numbers change.\n- **The meter updates twice a second by default** (it was about four). Settings → Meter → Fights → \"Refresh rate\" offers up to 5 times, 2 times or once a second. At once a second the timer can skip a second now and then, and a kill shows up to a second late.\n- **Side windows exist only while they are open.** Party, Fight details, Tracker, Gear and Settings are now built when you open them and removed when you close them, which frees their memory. The first open of a window takes a moment. Gear stays loaded in the background while \"New piece beats equipped\" is on.\n  - What a closed window forgets: the fight and filters picked in Fight details, the rows opened in Party, the character and row selected in Gear, the Pets filter, the last self-check report and the appearance editor's undo. The tab of Party and of Fight details is remembered, and so are a \"Teach a menu\" crop in progress and a skill chosen but not yet added.\n  - Settings → General → Performance → \"Keep side windows loaded\" brings back the old behaviour (a closed window stays in memory).\n- **The game goes first.** The meter's display processes now run at \"below normal\" priority, so the game wins when the processor is busy. Reading the game's data keeps its normal priority, so no hit is lost. Settings → General → Performance → \"Give the game priority\" turns it off.\n- **Update and roll back from the tray.** The tray menu now has \"Update to … available… → Update and restart\" when an update is offered, and \"Roll back to … → Roll back and restart\" when a previous version is kept. Neither needs the Settings window.\n- Party and Settings no longer receive anything while they are hidden, the lookup spinner turns in steps, and the overlay's rows build their tooltips with less work.\n\nIf a side window does not open, opens behind the game, or anything else looks wrong: tray → \"Roll back to 0.24.1 → Roll back and restart\".",
+  "version": "0.24.3",
+  "published": "2026-11-20T10:48:13Z",
+  "notes": "# Aion2DPSMeter 0.24.3\n\nThe meter no longer goes missing. No change to any number.\n\n- **A left click on the tray icon never hides the meter any more.** It always brings the overlay back and puts right whatever was stuck (as \"Reset windows (unstick)\" does). A single click on the tray icon used to hide the overlay without a word, which looked like the meter had disappeared. To hide the overlay on purpose, use \"Hide overlay\" in the tray menu (right click).\n- **Ctrl+Shift+M brings back a hidden overlay.** When the overlay is hidden, the click-through key shows it again and leaves click-through as it was. When it is shown, the key turns click-through on or off as before.\n- **The overlay stays above the game.** If the game window ends up on top of the overlay, the meter puts the overlay back on top within a few seconds, without taking the focus from the game. Other programs' windows are left alone. In true exclusive fullscreen the overlay is not forced over the game.\n- **\"Reset windows (unstick)\" says what it fixed** in `meter.log` (hidden, off screen, or under the game), and so does each time the overlay is put back on top. If the meter still goes missing, send `meter.log`.",
   "min_version": null,
   "assets": [
     {
-      "name": "Aion2DPSMeter-kit-0.24.2.zip",
-      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.24.2/Aion2DPSMeter-kit-0.24.2.zip",
-      "size": 9515207,
-      "sha256": "f790f0d22b7db0afe94b2ab307500ec4cdd10230beed4abf51a3b94a9c75cf63"
+      "name": "Aion2DPSMeter-kit-0.24.3.zip",
+      "url": "https://raw.githubusercontent.com/Sylfael/aion2dpsmeter_public/main/releases/0.24.3/Aion2DPSMeter-kit-0.24.3.zip",
+      "size": 9542321,
+      "sha256": "81e3765ae9571db534e46963140d1806620a8ce9655fdac0302f4757e822b664"
     }
   ],
   "signature": null
